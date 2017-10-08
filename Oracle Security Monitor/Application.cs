@@ -73,5 +73,12 @@ namespace Oracle_Security_Monitor
             dataGrid_userPrivs.DataSource = db_getUserPrivs(keyword).Tables[0];
             dataGrid_userSysPrivs.DataSource = db_getUserSysPrivs(keyword).Tables[0];
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string keyword = textBox3.Text;
+            //System.Console.WriteLine("Keyword is {0}", keyword);
+            dataGrid_userAudit.DataSource = db_getUserAudit(keyword).Tables[0];
+        }
     }
 }

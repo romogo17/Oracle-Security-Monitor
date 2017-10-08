@@ -91,6 +91,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Application));
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cambiarHWMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -128,6 +133,11 @@
             this.usuariosTitle = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.dataGrid_userRoles = new System.Windows.Forms.DataGridView();
+            this.tabPage_useraudit = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.dataGrid_userAudit = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tab_loginfo.SuspendLayout();
@@ -143,6 +153,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_userSysPrivs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_userPrivs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_userRoles)).BeginInit();
+            this.tabPage_useraudit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_userAudit)).BeginInit();
             this.SuspendLayout();
             // 
             // opcionesToolStripMenuItem
@@ -210,6 +222,7 @@
             this.tabControl1.Controls.Add(this.tab_archive);
             this.tabControl1.Controls.Add(this.tabPage_roles);
             this.tabControl1.Controls.Add(this.tabPage_usuarios);
+            this.tabControl1.Controls.Add(this.tabPage_useraudit);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 24);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(0);
@@ -890,6 +903,97 @@
             this.dataGrid_userRoles.Size = new System.Drawing.Size(345, 188);
             this.dataGrid_userRoles.TabIndex = 30;
             // 
+            // tabPage_useraudit
+            // 
+            this.tabPage_useraudit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.tabPage_useraudit.Controls.Add(this.button1);
+            this.tabPage_useraudit.Controls.Add(this.label1);
+            this.tabPage_useraudit.Controls.Add(this.textBox3);
+            this.tabPage_useraudit.Controls.Add(this.dataGrid_userAudit);
+            this.tabPage_useraudit.Location = new System.Drawing.Point(4, 4);
+            this.tabPage_useraudit.Name = "tabPage_useraudit";
+            this.tabPage_useraudit.Size = new System.Drawing.Size(759, 518);
+            this.tabPage_useraudit.TabIndex = 4;
+            this.tabPage_useraudit.Text = "Auditar Usuario";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(151, 33);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 38;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(8, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(134, 20);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Auditar Usuario";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(12, 33);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(120, 21);
+            this.textBox3.TabIndex = 36;
+            // 
+            // dataGrid_userAudit
+            // 
+            this.dataGrid_userAudit.AllowUserToAddRows = false;
+            this.dataGrid_userAudit.AllowUserToDeleteRows = false;
+            this.dataGrid_userAudit.AllowUserToOrderColumns = true;
+            this.dataGrid_userAudit.AllowUserToResizeRows = false;
+            dataGridViewCellStyle46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            dataGridViewCellStyle46.ForeColor = System.Drawing.SystemColors.Control;
+            this.dataGrid_userAudit.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle46;
+            this.dataGrid_userAudit.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGrid_userAudit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.dataGrid_userAudit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle47.BackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle47.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid_userAudit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle47;
+            this.dataGrid_userAudit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            dataGridViewCellStyle48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle48.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle48.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle48.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGrid_userAudit.DefaultCellStyle = dataGridViewCellStyle48;
+            this.dataGrid_userAudit.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            this.dataGrid_userAudit.Location = new System.Drawing.Point(12, 80);
+            this.dataGrid_userAudit.MaximumSize = new System.Drawing.Size(733, 417);
+            this.dataGrid_userAudit.Name = "dataGrid_userAudit";
+            this.dataGrid_userAudit.ReadOnly = true;
+            this.dataGrid_userAudit.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            dataGridViewCellStyle49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle49.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle49.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle49.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle49.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid_userAudit.RowHeadersDefaultCellStyle = dataGridViewCellStyle49;
+            this.dataGrid_userAudit.RowHeadersVisible = false;
+            dataGridViewCellStyle50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(27)))), ((int)(((byte)(27)))));
+            dataGridViewCellStyle50.ForeColor = System.Drawing.SystemColors.Control;
+            this.dataGrid_userAudit.RowsDefaultCellStyle = dataGridViewCellStyle50;
+            this.dataGrid_userAudit.Size = new System.Drawing.Size(733, 417);
+            this.dataGrid_userAudit.TabIndex = 35;
+            // 
             // Application
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -925,6 +1029,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_userSysPrivs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_userPrivs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_userRoles)).EndInit();
+            this.tabPage_useraudit.ResumeLayout(false);
+            this.tabPage_useraudit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_userAudit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1462,6 +1569,45 @@
                 return data;
             }
         }
+        private DataSet db_getUserAudit(string keyword)
+        {
+            using (OracleConnection objConn = new OracleConnection(ConfigurationManager.AppSettings["connectionString"]))
+            {
+                DataSet data = new DataSet("alerta");
+
+                // Create and execute the command
+                OracleCommand objCmd = new OracleCommand();
+                objCmd.Connection = objConn;
+                objCmd.CommandText = "get_audit_user";
+                objCmd.CommandType = CommandType.StoredProcedure;
+                //objCmd.Parameters.Add("keyword", OracleDbType.Varchar2, keyword, ParameterDirection.Input);
+
+                // Set parameters
+                OracleParameter retParam = objCmd.Parameters.Add("return_value", OracleDbType.RefCursor, ParameterDirection.ReturnValue);
+                objCmd.Parameters.Add("keyword", OracleDbType.Varchar2, keyword, System.Data.ParameterDirection.Input);
+
+                try
+                {
+                    objConn.Open();
+                    objCmd.ExecuteNonQuery();
+
+                    OracleDataAdapter a = new OracleDataAdapter(objCmd);
+                    a.TableMappings.Add("MyTable", "sample_table"); // possible need for this
+                    a.Fill(data);
+
+                    //return sqlInfo;
+                    //System.Console.WriteLine("Memory Usage is {0}", retParam.Value);
+                }
+                catch (Exception ex)
+                {
+                    System.Console.WriteLine("Exception: {0}", ex.ToString());
+                }
+
+                objConn.Close();
+                objConn.Dispose();
+                return data;
+            }
+        }
 
         /********************************************************************************/
 
@@ -1557,6 +1703,11 @@
         private Label usuariosTitle;
         private TextBox textBox2;
         private DataGridView dataGrid_userRoles;
+        private TabPage tabPage_useraudit;
+        private Button button1;
+        private Label label1;
+        private TextBox textBox3;
+        private DataGridView dataGrid_userAudit;
     }
 
 }
